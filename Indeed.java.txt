@@ -1,0 +1,24 @@
+package Com.Indeed.Training;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class IndeedTest {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+System.setProperty("webdriver.gecko.driver","C:\\Users\\Pradeep Reddy\\Desktop\\QA Stuff\\Selenium\\JAR\\geckodriver firefox exe.exe");
+WebDriver driver = new FirefoxDriver();
+driver.get("http://www.indeed.com");
+driver.findElement(By.id("what")).sendKeys("Selenium");
+driver.findElement(By.id("where")).clear();
+driver.findElement(By.id("where")).sendKeys("NewYork");
+Thread.sleep(3000);
+driver.findElement(By.id("fj")).click();
+	}
+}
+	
+
